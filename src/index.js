@@ -10,6 +10,8 @@ mongoose.connect('mongodb+srv://sourabhamohite2812:wXzbwlWssiEAjJL1@cluster0.m7a
 .then(()=> console.log("MongoDb is connected"))
 .catch((err)=> console.log(err.message))
 
+app.use('/' , route)
+
 app.listen(process.env.PORT || 3000 , function(){
     console.log('Express app running on PORT ', process.env.PORT || 3000 )
 })

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-        title: {type : String, required: true, enum: [Mr, Mrs, Miss]},
+        title: {type : String, required: true, enum: ['Mr', 'Mrs', 'Miss']},
         name: {type : String, required: true},
         phone: {type: String, required: true, unique: true},
         email: {type: String, required: true , unique:true}, 
@@ -11,6 +11,6 @@ const userSchema = new mongoose.Schema({
           city: {type : String},
           pincode: {type: String}
         },
-},{timestamp:true})
+},{timestamps:true})
 
 module.exports = mongoose.model('usermodel', userSchema)
