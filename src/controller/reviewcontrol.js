@@ -47,9 +47,9 @@ const createReview = async function(req, res) {
             if (!isValid(reviewedBy)) {
                 return res.status(400).send({ status: false, message: "Reviewer name not in correct format or not mentioned." })
             }
-            if (!/^[a-zA-Z ]{3,30}$/.test(reviewedBy)) {
-                return res.status(400).send({ status: false, message: "Invalid reviewer name." })
-            }
+            // if (!/^[a-zA-Z ]{3,30}$/.test(reviewedBy)) {
+            //     return res.status(400).send({ status: false, message: "Invalid reviewer name." })
+            // }
             final.reviewedBy = reviewedBy
 
         }
@@ -131,9 +131,9 @@ const updateReview = async function(req, res) {
             if (!isValid(reviewedBy)) {
                 return res.status(400).send({ status: false, message: "Reviewer name not in correct format or not mentioned." })
             }
-            if (!/^[a-zA-Z ]{3,30}$/.test(reviewedBy)) {
-                return res.status(400).send({ status: false, message: "Invalid reviewer name." })
-            }
+            // if (!/^[a-zA-Z ]{3,30}$/.test(reviewedBy)) {
+            //     return res.status(400).send({ status: false, message: "Invalid reviewer name." })
+            // }
         }
         final.reviewedBy = reviewedBy
 
